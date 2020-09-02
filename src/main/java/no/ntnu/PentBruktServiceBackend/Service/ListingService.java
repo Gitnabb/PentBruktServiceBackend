@@ -1,12 +1,14 @@
 package no.ntnu.PentBruktServiceBackend.Service;
 
-import jakarta.transaction.Transactional;
 import no.ntnu.PentBruktServiceBackend.Domain.Listing;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
+import javax.enterprise.context.Dependent;
+import javax.transaction.Transactional;
 
 @Transactional
+@Dependent
 public class ListingService {
 
     // Persistence context keep track of the entity state
