@@ -18,12 +18,6 @@ public class ListingController {
     ListingService listingService;
 
     @GET
-    @Path("test")
-    public String test(){
-        return "test";
-    }
-
-    @GET
     @Path("all-listings")
     public Response getAllItems() {
         return Response.ok(this.listingService.getAllListings()).build();
